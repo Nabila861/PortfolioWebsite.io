@@ -1,0 +1,27 @@
+.app{
+    height: 100vh;
+    
+
+    /*====Inside the ".app" class, there is another nested class called ".sections". It has the following properties:
+
+*/
+    .sections{
+        width: 100%;
+        height:calc(100vh - 70px) ;
+        background-color: lightsalmon;
+        position: relative;
+        top: 70px;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory; //vertical direction (y). It specifies that the scrolling should snap to the nearest scroll container
+        scrollbar-width: none; //for firefox
+        &::-webkit-scrollbar{        //webkit-scrollbar and sets its display to none. This rule is specific to WebKit-based browsers (such as Chrome and Safari) and is used to hide the default scrollbar.
+            display: none;
+        }
+    /*=====The "> *" selector targets all direct child elements of ".sections". It sets the following properties for those elements:*/
+        > *{ 
+            width: 100vw;
+            height: calc(100vh - 70px);
+          scroll-snap-align: start;
+        }
+    }
+}

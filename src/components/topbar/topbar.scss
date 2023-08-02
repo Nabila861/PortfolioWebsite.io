@@ -1,0 +1,227 @@
+@import "../../global.scss";
+.topbar{
+    width: 100%;
+    background-color:white;
+    text-align: $mainColor;
+    position: fixed;
+    top: 0;
+    z-index: 3;
+    transition: all 1s ease;
+   
+    .wrapper{
+        padding: 10px 30px;
+      display: flex;
+    align-items: center;
+    justify-content:space-between ;
+
+    
+    .left{
+        display: flex;
+        align-items: center;
+
+        .logo{
+          font-size: 2.5em; // Use em for font size
+          margin-right: 2em; // Use em for margin
+         font-weight:700;
+         text-decoration: none;
+         color: inherit; // inherit the color from parent above
+         @include mobile {
+          font-size: 1.5em; // Decrease font size for mobile
+          margin-right: 1em; // Decrease margin for mobile
+        }
+
+        @include between{
+          font-size: 1.3em; // Decrease font size for mobile
+          margin-right: 0.5em;
+ 
+        }
+         }
+         .itemcontainer{
+            display: flex;
+            align-items: center;
+            margin-left: 30px;
+
+    @include mobile{
+        display: none;
+    }
+   
+   
+          .icon{
+            font-size: 2.1em;
+            margin-right: 0.1em;
+            @include between{
+              font-size: 1.0rem; 
+              margin: 0.2em;
+        
+            }
+          }
+
+          span{
+            font-size: 15px;
+            font-weight: 500;
+            @include between{
+              font-size: 1.0rem; 
+              margin: 0.2em;
+        
+            }
+          }
+        }
+    }
+ .right{
+
+  //start
+  display: flex;
+  align-items: center;
+
+  .itemcontainer1 {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
+
+    .icon {
+      font-size: 2.1em;
+      margin-right: 0.1em;
+      color: green;
+      @include between{
+        font-size: 1.7rem; 
+      }
+    }
+    
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      color: green; 
+      @include between{
+        font-size: 1rem; 
+      }
+    }
+    
+    
+  }
+
+  .itemcontainer2 {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
+
+    .icon {
+      font-size: 2.1em;
+      margin-right: 0.1em;
+      color: rgb(4, 90, 219);
+      @include between{
+        font-size: 1.7rem; 
+      }
+    }
+    
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgb(4, 90, 219); 
+      @include between{
+        font-size: 1rem; 
+      }
+    }
+    
+    
+  }
+
+  .itemcontainer3 {
+    display: flex;
+    align-items: center;
+    margin-left: 1em;
+    margin-right: 1em;
+    cursor: pointer;
+
+    @include mobile {
+      display: none;
+    }
+
+    .icon {
+      font-size: 2.1em;
+      margin-right: 0.1em;
+      color: rgb(0, 0, 0);
+      @include between{
+        font-size: 1.7rem; 
+      }
+    }
+    
+
+    span {
+      font-size: 20px;
+      font-weight: 500;
+      color: rgb(0, 0, 0);
+      @include between{
+        font-size: 1rem; 
+      } 
+    }
+    
+    
+  }
+//end
+
+     .hamburger{
+        width: 32px;
+        height: 25px;
+        margin-left: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+        overflow-y: hidden;
+
+
+        span{
+            width: 100%;
+            height: 3px;
+            background-color: $mainColor;
+            transform-origin: left;
+            
+        }
+     }
+
+
+
+ }
+
+    }
+&.active{
+background-color: $mainColor;
+color: rgb(246, 246, 246);
+
+
+.hamburger{
+
+  span{
+    &:first-child{
+background-color: white;
+transform: rotate(45deg);
+transition: all 2s ease;
+
+    }
+    &:nth-child(2){
+      opacity: 0;
+    }
+&:last-child{
+  background-color: white;
+  transform: rotate(-45deg);
+  transition: all 2s ease;
+}
+  }
+}
+}
+
+}
